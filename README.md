@@ -54,18 +54,45 @@ More charts are available in the `outputs/` folder.
 
 ## How to run
 
-Use Python 3.10+.
+Use Python 3.10 or later.
+
+### 1. Create a virtual environment
 
 ```bash
 python -m venv .venv
-# Windows: .venv\Scripts\activate
-# macOS/Linux: source .venv/bin/activate
-pip install -r requirements.txt
+```
+
+### 2. Activate the virtual environment
+
+**Windows (PowerShell):**
+
+```powershell
+.venv\Scripts\Activate.ps1
+```
+
+**macOS / Linux:**
+
+```bash
+source .venv/bin/activate
+```
+
+Use only the activation command for your operating system.
+
+### 3. Install dependencies
+
+```bash
+python -m pip install -r requirements.txt
+```
+
+### 4. Run the notebook
+
+```bash
 jupyter notebook Superstore_Sales_Analysis.ipynb
 ```
 
-Run the notebook from this project directory so its relative paths to `data/` and `outputs/` resolve correctly. The notebook reads the included `.xlsx` file using `openpyxl` and regenerates the output CSV files and charts.
+Run the notebook from the project root directory so that the relative paths to `data/` and `outputs/` resolve correctly.
 
+The notebook reads the included Excel dataset using `openpyxl` and regenerates the output CSV files and visualizations.
 ## Repository structure
 
 ```text
